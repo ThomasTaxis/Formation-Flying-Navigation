@@ -1,0 +1,44 @@
+# ========== Compiled Files ==========
+*.exe
+*.obj
+*.pdb
+*.ilk
+*.idb
+*.aps
+*.lib
+*.dll
+
+# ========== Build Folders ==========
+/Debug/
+/Release/
+/x64/
+/x86/
+
+# ========== User-Specific VS Configs ==========
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+*.VC.db
+*.VC.opendb
+*.ncb
+*.cache
+*.log
+
+# ========== Temporary Files ==========
+*.tlog
+*.ipch
+*.tmp
+*.bak
+
+# ========== OS-generated Files ==========
+.DS_Store
+Thumbs.db
+
+# ========== Backup Files ==========
+*.old
+*.orig
+
+# ========== Ignore Generated Images (optional) ==========
+# If you generate images with `imwrite`, and don’t want to track them:
+# *.png
