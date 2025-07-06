@@ -645,7 +645,7 @@ Mat processImage(const std::string& imagePath) {
 // MAIN FUNCTION
 
 int main(int argc, char** argv) {
-    string directoryPath = ".\\dataset\\";
+    string directoryPath = ".\\P3_nonCoop_DynamicTest_png\\";
 
     vector<string> imagePaths;
     glob(directoryPath + "*.png", imagePaths, false);
