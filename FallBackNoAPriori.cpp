@@ -438,14 +438,7 @@ Mat processImage(const std::string& imagePath) {
 
     Mat img_thresh = customThreshold(img_blurred, 20);
 
-    //Mat grad_x, grad_y, mag, mag_8U;
-
-    //grad_x = horizontal_gradient(img_thresholded);
-    //grad_y = vertical_gradient(img_thresholded);
-    //mag = magnitude(grad_x, grad_y);
-    //mag_8U = magnitude_8U(mag);
-    //Mat img_gray;
-
+    
 
 
 
@@ -481,9 +474,9 @@ Mat processImage(const std::string& imagePath) {
     maxY = std::min(roiImage.rows, maxY + margin);
 
     cv::Rect roi(minX, minY, maxX - minX, maxY - minY);
-    cv::Mat subImage = img_contour(roi); // ??????? CONTOUR
-    cv::Mat subImage_original = roi_original(roi); // ??????? ORIGINAL IMAGE
-    cv::Mat subImage_gray = roiImage(roi); // ?????? GRAY IMAGE ???? ??????????? ????!!!
+    cv::Mat subImage = img_contour(roi); 
+    cv::Mat subImage_original = roi_original(roi);
+    cv::Mat subImage_gray = roiImage(roi); 
 
 
 
@@ -513,9 +506,7 @@ Mat processImage(const std::string& imagePath) {
 
     double lowThreshold = 50;
     double highThreshold = 150;
-    //Mat custom_canny_result = customCanny(corners_image, lowThreshold, highThreshold);
-    //custom_canny_result.setTo(Scalar(0), dilated_corners_mask == 0);
-    //cv::imshow("Canny image", custom_canny_result);
+    
 
     std::vector<cv::Rect> rois;
     std::vector<cv::Rect> expanded_rois;
@@ -612,20 +603,6 @@ Mat processImage(const std::string& imagePath) {
     }
 
 
-
-
-    //cv::imshow("Corner drawn image", Corner_img);
-    //cv::imshow("Canny image", custom_canny_result);
-    //cv::imshow("Corner drawn image canny", Corner_img_canny);
-    //imshow("canny", custom_canny_result);
-    //imshow("canny 2", custom_canny_result_2);
-    //imwrite("canny240.png", custom_canny_result);
-    //imwrite("canny_whole.png", custom_canny_result_2);
-    //imwrite("canny.png", custom_canny_result);
-    //imwrite("canny_corners_2.png", Original_img_canny);
-    //imwrite("canny_corners.png", Corner_img_canny);
-    //imshow("Translated Coordinates No Canny", Original_img_canny_noCanny);
-    //imshow("Corrected Coordinates no Canny", Corr_Coor_noCanny);
     imshow("Translated Coordinates", Original_img_canny);
     imshow("Corrected Coordinates", Corr_Coor_Canny);
     waitKey(0);
